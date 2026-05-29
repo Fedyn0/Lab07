@@ -16,11 +16,10 @@ class Controller:
     def handle_umidita_media(self, e):
         pass
 
-
-
     def handle_sequenza(self, e):
         pass
 
     def read_mese(self, e):
         self._mese = int(e.control.value)
+        print(int(e.control.value))
 
