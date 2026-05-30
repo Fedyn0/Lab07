@@ -43,7 +43,11 @@ class Controller:
 
         mese = self._view.dd_mese.value
 
-        lista = self._model.getSituazione15Giorni(mese)
+        sequenza, costo = self._model.calcola_sequenza(mese)
+
+        self._view.lst_result.controls.append(ft.Text(f"La sequenza ottima ha costo di {costo} ed è:\n"
+                                                      f"{sequenza}"))
+        self._view.update_page()
 
 
     def read_mese(self, e):
