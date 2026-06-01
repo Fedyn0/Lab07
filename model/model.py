@@ -42,7 +42,7 @@ class Model:
 
     def calcola_sequenza(self,mese):
 
-        self.dati_meteo = DAO.getSituazioneMese(self, mese)
+        self.dati_meteo = DAO.getSituazione15giorni(self, mese)
 
         for situazione in self.dati_meteo:
             chiave = (situazione.Localita, situazione.Data.day)
